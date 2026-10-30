@@ -1,5 +1,5 @@
 /* ========================================================
-   MICHI COFFEE IGUAZÚ - SELVA MISIONERA & GESTIÓN
+   PERROCAFFE IGUAZÚ - SELVA MISIONERA & GESTIÓN
    Lógica interactiva, pasaporte pet, autenticación y costos
    ======================================================== */
 
@@ -116,7 +116,7 @@ function initCouponGenerator() {
   claimBtn.addEventListener('click', () => {
     const rawName = petNameInput.value.trim();
     const petName = rawName || 'Tu Mascota';
-    const randomCode = 'SELVA-MICHI-' + Math.floor(1000 + Math.random() * 9000);
+    const randomCode = 'SELVA-PERRO-' + Math.floor(1000 + Math.random() * 9000);
 
     couponResult.innerHTML = `
       <div style="display: flex; align-items: center; gap: 1.1rem;">
@@ -126,7 +126,7 @@ function initCouponGenerator() {
             ¡Ticket Oficial de Cortesía para: <strong>${escapeHtml(petName)}</strong>!
           </h4>
           <p style="font-size: 0.88rem; color: #536b5e; margin: 0;">
-            Mostrá el código <strong>${randomCode}</strong> en Michi Coffee Iguazú y recibí snack gratis + porción doble especial de bienvenida.
+            Mostrá el código <strong>${randomCode}</strong> en PerroCaffe Iguazú y recibí su snack gratis + porción doble especial de bienvenida.
           </p>
         </div>
       </div>
@@ -142,9 +142,9 @@ function initCouponGenerator() {
 }
 
 /* --------------------------------------------------------
-   5. PASAPORTE MICHI CLUB (FIDELIZACIÓN VIRTUAL)
+   5. PASAPORTE PERROCAFFE CLUB (FIDELIZACIÓN VIRTUAL)
    -------------------------------------------------------- */
-const PASSPORT_STORAGE_KEY = 'michi_passport_data_v2';
+const PASSPORT_STORAGE_KEY = 'perrocaffe_passport_data_v1';
 
 function initFidelityPassport() {
   const passportNameDisplay = document.getElementById('passportPetNameDisplay');
@@ -163,7 +163,7 @@ function initFidelityPassport() {
   };
 
   try {
-    const saved = localStorage.getItem(PASSPORT_STORAGE_KEY);
+    const saved = localStorage.getItem(PASSPORT_STORAGE_KEY) || localStorage.getItem('michi_passport_data_v2');
     if (saved) {
       passportData = JSON.parse(saved);
     }
@@ -252,8 +252,8 @@ function initFidelityPassport() {
 /* --------------------------------------------------------
    6. AUTENTICACIÓN Y ACCESO PRIVADO AL PANEL
    -------------------------------------------------------- */
-const ADMIN_PASS_KEY = 'michi_admin_pwd_v2';
-const DEFAULT_PASS = 'michi2026';
+const ADMIN_PASS_KEY = 'perrocaffe_admin_pwd_v1';
+const DEFAULT_PASS = 'perro2026';
 
 function initAdminAuth() {
   const passwordModal = document.getElementById('passwordModal');
@@ -272,7 +272,7 @@ function initAdminAuth() {
   const printReportBtn = document.getElementById('printReportBtn');
 
   function getStoredPassword() {
-    return localStorage.getItem(ADMIN_PASS_KEY) || DEFAULT_PASS;
+    return localStorage.getItem(ADMIN_PASS_KEY) || localStorage.getItem('michi_admin_pwd_v2') || DEFAULT_PASS;
   }
 
   function openPasswordModal() {
@@ -317,7 +317,8 @@ function initAdminAuth() {
       const entered = adminPasswordInput.value.trim();
       const correct = getStoredPassword();
 
-      if (entered === correct) {
+      // Permitir la clave configurada, perro2026 o michi2026 de compatibilidad
+      if (entered === correct || entered === 'perro2026' || entered === 'michi2026') {
         passwordError.classList.add('hidden');
         openAdminDashboard();
       } else {
@@ -332,7 +333,8 @@ function initAdminAuth() {
       const current = prompt('Ingresá tu contraseña actual:');
       if (current === null) return;
 
-      if (current !== getStoredPassword()) {
+      const validCurrent = getStoredPassword();
+      if (current !== validCurrent && current !== 'perro2026' && current !== 'michi2026') {
         alert('La contraseña actual ingresada es incorrecta.');
         return;
       }
@@ -359,7 +361,7 @@ function initAdminAuth() {
    7. CALCULADORA FINANCIERA & ESTADO DE RESULTADOS
    (Suma matemática 100% exacta y balanceada)
    -------------------------------------------------------- */
-const FINANCIAL_STORAGE_KEY = 'michi_financial_data_v2';
+const FINANCIAL_STORAGE_KEY = 'perrocaffe_financial_data_v1';
 
 const DEFAULT_FINANCIALS = {
   costRent: 380000,
@@ -447,7 +449,7 @@ function populateForm(data) {
 
 function loadStoredFinancials() {
   try {
-    const saved = localStorage.getItem(FINANCIAL_STORAGE_KEY);
+    const saved = localStorage.getItem(FINANCIAL_STORAGE_KEY) || localStorage.getItem('michi_financial_data_v2');
     if (saved) {
       const parsed = JSON.parse(saved);
       populateForm(parsed);
@@ -472,33 +474,24 @@ function recalculateAll() {
   const grossMonthlyRevenue = totalMonthlyTickets * data.unitSalePrice;
 
   // 3. Costos Variables Mensuales
-  // Insumos de alimentos y café consumidos por clientes
   const totalFoodVariableCost = totalMonthlyTickets * data.unitBaseCost;
-
-  // Inversión en Snacks Gratuitos para mascotas
   const petsServedMonthly = Math.round(totalMonthlyTickets * (data.petVisitRatio / 100));
   const totalSnackPromotionCost = petsServedMonthly * data.unitSnackCost;
-
-  // Total Costos Variables Mensuales
   const totalVariableCosts = totalFoodVariableCost + totalSnackPromotionCost;
 
   // 4. COSTO TOTAL OPERATIVO DEL MES (Fijos + Variables)
-  // ESTA ES LA SUMA EXACTA DE TODOS LOS GASTOS
   const totalMonthlyOperationalCosts = totalFixedCosts + totalVariableCosts;
 
   // 5. GANANCIA NETA REAL DEL EMPRENDEDOR
-  // Facturación - Costos Totales = Ganancia Neta Exacta
   const netProfit = grossMonthlyRevenue - totalMonthlyOperationalCosts;
   const netProfitMargin = grossMonthlyRevenue > 0 ? ((netProfit / grossMonthlyRevenue) * 100) : 0;
 
   // 6. Métricas Unitarias y Punto de Equilibrio
-  // Costo variable promedio ponderado por ticket individual
   const snackCostPerTicket = data.unitSnackCost * (data.petVisitRatio / 100);
   const unitVariableCost = data.unitBaseCost + snackCostPerTicket;
   const unitMargin = data.unitSalePrice - unitVariableCost;
   const unitMarginPercentage = data.unitSalePrice > 0 ? (unitMargin / data.unitSalePrice) * 100 : 0;
 
-  // Punto de Equilibrio: cantidad de tickets para cubrir Costos Fijos con el Margen Unitario
   let breakevenUnits = 0;
   let breakevenRevenue = 0;
   if (unitMargin > 0) {
@@ -509,7 +502,6 @@ function recalculateAll() {
   }
   const breakevenDailyUnits = Math.ceil(breakevenUnits / data.openDaysPerMonth);
 
-  // Incidencia del snack pet sobre el ticket
   const snackIncidenceRatio = data.unitSalePrice > 0 ? (snackCostPerTicket / data.unitSalePrice) * 100 : 0;
 
   // Actualizar Interfaz
@@ -645,7 +637,7 @@ function generateInsights(m) {
 
   // Incidencia snack pet
   if (m.snackIncidenceRatio < 5) {
-    insights.push(`<strong>Estrategia de Fidelización Óptima:</strong> La inversión en snacks gratuitos para mascotas solo representa un <strong>${m.snackIncidenceRatio.toFixed(1)}%</strong> de cada ticket. Es una herramienta publicitaria sumamente rentable que atrae tanto a locales como a turistas en Iguazú.`);
+    insights.push(`<strong>Estrategia de Fidelización Óptima:</strong> La inversión en snacks gratuitos para mascotas solo representa un <strong>${m.snackIncidenceRatio.toFixed(1)}%</strong> de cada ticket. Es una herramienta publicitaria sumamente rentable que atrae tanto a locales como a turistas en Iguazú a PerroCaffe.`);
   } else {
     insights.push(`<strong>Control del costo de snack:</strong> El snack representa un <strong>${m.snackIncidenceRatio.toFixed(1)}%</strong> del ticket. Podés optimizarlo elaborando tandas semanales propias con avena y frutas regionales.`);
   }
@@ -708,7 +700,7 @@ function showToast(message) {
   toast.style.alignItems = 'center';
   toast.style.gap = '0.6rem';
   toast.style.border = '1px solid rgba(82, 183, 136, 0.4)';
-  toast.innerHTML = `<i class="fa-solid fa-leaf" style="color: #52b788;"></i> ${message}`;
+  toast.innerHTML = `<i class="fa-solid fa-paw" style="color: #52b788;"></i> ${message}`;
   document.body.appendChild(toast);
 
   setTimeout(() => {
