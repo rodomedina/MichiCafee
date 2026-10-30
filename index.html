@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michi Coffee Iguazú | Cafetería Pet Friendly & Selva Misionera</title>
+  <meta name="description" content="Café de especialidad en Puerto Iguazú en un entorno de selva tropical misionera. Pet friendly con snacks saludables 100% gratis para tu mascota.">
+  <!-- Google Fonts: Syne / Plus Jakarta Sans / Fredoka -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar: Selva Misionera -->
+  <aside class="announcement-bar" aria-label="Promoción especial">
+    <div class="container bar-content">
+      <span><i class="fa-solid fa-leaf"></i> <strong>PROMO SELVA PET:</strong> ¡Por cada café o merienda, tu michi o lomito come su <strong>snack artesanal 100% gratis</strong>! 🐾🌿</span>
+      <a href="#promo-snack" class="bar-link">Reclamar snack &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon">
+          <i class="fa-solid fa-paw"></i>
+          <span class="leaf-dot"><i class="fa-solid fa-leaf"></i></span>
+        </span>
+        <div class="logo-text">
+          <span class="brand-title">Michi Coffee</span>
+          <span class="brand-subtitle">Iguazú • Selva & Pet Friendly</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#promo-snack" class="nav-link">Snack Gratis</a></li>
+          <li><a href="#menu" class="nav-link">Carta Selvática</a></li>
+          <li><a href="#fidelizacion" class="nav-link">Pasaporte Michi</a></li>
+          <li><a href="#nosotros" class="nav-link">Experiencia</a></li>
+          <li><a href="#contacto" class="nav-link">Ubicación</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="btn btn-admin-trigger" id="openAdminModalBtn" title="Acceso exclusivo para propietarios">
+            <i class="fa-solid fa-lock"></i> <span>Gestión & Costos</span>
+          </button>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section: Selva Misionera & Pet Friendly -->
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-bg-leaves"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-tag">
+            <span class="badge-dot"></span>
+            <i class="fa-solid fa-tree"></i> Oasis Pet Friendly en Puerto Iguazú
+          </div>
+          <h1 class="hero-title">
+            Café de especialidad entre la <span class="highlight-jungle">selva misionera</span> y tu <span class="highlight-clay">mejor amigo</span>.
+          </h1>
+          <p class="hero-description">
+            Rodeados por la vegetación subtropical de <strong>Iguazú</strong> y sobre la mística <strong>tierra colorada</strong>, creamos una experiencia donde los aromas del café recién tostado se combinan con un espacio pensado para que tu mascota disfrute y <strong>coma gratis</strong>.
+          </p>
+          <div class="hero-buttons">
+            <a href="#promo-snack" class="btn btn-primary">
+              <i class="fa-solid fa-bone"></i> Ver Snacks Gratuitos
+            </a>
+            <a href="#fidelizacion" class="btn btn-secondary">
+              <i class="fa-solid fa-passport"></i> Pasaporte de Huellitas
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">+1.400</span>
+              <span class="stat-label">Peluditos felices</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Snacks Naturales</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">4.9 ★</span>
+              <span class="stat-label">Puerto Iguazú</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-wrapper">
+            <div class="hero-image-card">
+              <div class="hero-img-badge">
+                <i class="fa-solid fa-mug-hot"></i> Specialty Coffee & Jungle Pets
+              </div>
+              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" alt="Mascota feliz en cafetería rodeada de vegetación" class="hero-main-img">
+              <div class="floating-pet-card">
+                <div class="floating-avatar">🐱</div>
+                <div class="floating-info">
+                  <strong>Snack de Cortesía:</strong>
+                  <p><i class="fa-solid fa-gift"></i> Galletitas de calabaza y avena gratis</p>
+                </div>
+              </div>
+            </div>
+            <div class="hero-deco-leaf">🌿</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo Snack Gratis Section -->
+    <section class="section promo-section" id="promo-snack">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-sparkles"></i> Beneficio Exclusivo Michi</span>
+          <h2 class="section-title">En Michi Coffee, los animales comen por cuenta de la casa</h2>
+          <p class="section-subtitle">
+            Cada vez que consumís una bebida o pastelería artesanal, nosotros agasajamos a tu mascota con un snack nutritivo, seguro y <strong>completamente libre de costo</strong>.
+          </p>
+        </div>
+
+        <div class="snack-grid">
+          <div class="snack-card">
+            <div class="snack-badge"><i class="fa-solid fa-cat"></i> Para Gatitos</div>
+            <div class="snack-icon"><i class="fa-solid fa-fish"></i></div>
+            <h3>Michi Bocaditos de Atún & Catnip</h3>
+            <p>Elaborados con atún natural, harina de arroz y un toque de menta gatuna orgánica. Horneados a diario sin sal agregada.</p>
+            <div class="snack-price-tag">
+              <span class="strikethrough">$ 1.800</span>
+              <span class="free-text"><i class="fa-solid fa-check"></i> ¡GRATIS con tu café!</span>
+            </div>
+          </div>
+
+          <div class="snack-card featured">
+            <div class="popular-ribbon"><i class="fa-solid fa-star"></i> El más pedido</div>
+            <div class="snack-badge"><i class="fa-solid fa-dog"></i> Para Lomitos</div>
+            <div class="snack-icon"><i class="fa-solid fa-bone"></i></div>
+            <h3>Croccantines Selva de Avena & Miel</h3>
+            <p>Galletas crocantes a base de manzana misionera, avena integral y miel pura de la cuenca orgánica provincial.</p>
+            <div class="snack-price-tag">
+              <span class="strikethrough">$ 2.000</span>
+              <span class="free-text"><i class="fa-solid fa-check"></i> ¡GRATIS con tu café!</span>
+            </div>
+          </div>
+
+          <div class="snack-card">
+            <div class="snack-badge"><i class="fa-solid fa-sun"></i> Refrescante Tropical</div>
+            <div class="snack-icon"><i class="fa-solid fa-ice-cream"></i></div>
+            <h3>Pup-uccino Frío de Banana Iguazú</h3>
+            <p>Espuma de leche deslactosada batida con puré de bananas regionales maduras y un toque de canela apta para mascotas.</p>
+            <div class="snack-price-tag">
+              <span class="strikethrough">$ 1.900</span>
+              <span class="free-text"><i class="fa-solid fa-check"></i> ¡GRATIS con tu café!</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Coupon Generator -->
+        <div class="coupon-box">
+          <div class="coupon-inner">
+            <div class="coupon-text">
+              <h3><i class="fa-solid fa-ticket"></i> Generá tu Ticket Digital de Bienvenida</h3>
+              <p>Escribí el nombre de tu mascota y te regalamos un ticket digital canjeable en el mostrador para una porción doble de snack.</p>
+            </div>
+            <div class="coupon-form">
+              <input type="text" id="petNameInput" placeholder="Nombre de tu perro o gato..." maxlength="25">
+              <button class="btn btn-primary" id="claimCouponBtn">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Obtener Ticket
+              </button>
+            </div>
+          </div>
+          <div id="couponResult" class="coupon-result hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-mug-saucer"></i> Nuestra Carta</span>
+          <h2 class="section-title">Sabores de la Selva para vos y tu mascota</h2>
+          <p class="section-subtitle">Granos arábica seleccionados, pastelería artesanal misionera y recetas balanceadas para animales.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="menu-tabs">
+          <button class="tab-btn active" data-filter="all"><i class="fa-solid fa-layer-group"></i> Toda la Carta</button>
+          <button class="tab-btn" data-filter="cafe"><i class="fa-solid fa-coffee"></i> Cafetería</button>
+          <button class="tab-btn" data-filter="dulce"><i class="fa-solid fa-cookie-bite"></i> Pastelería & Chipá</button>
+          <button class="tab-btn" data-filter="pet"><i class="fa-solid fa-paw"></i> Menú Mascotas</button>
+        </div>
+
+        <div class="menu-items-grid" id="menuItemsGrid">
+          <!-- Item 1 -->
+          <div class="menu-item-card" data-category="cafe">
+            <div class="menu-item-img">
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=400&q=80" alt="Capuccino Selva Michi">
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-head">
+                <h4>Capuccino Michi Art</h4>
+                <span class="item-price">$ 3.600</span>
+              </div>
+              <p>Doble shot de espresso, leche texturizada con arte latte de huellita en canela misionera.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="menu-item-card" data-category="cafe">
+            <div class="menu-item-img">
+              <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=400&q=80" alt="Cold Brew Iguazú Falls">
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-head">
+                <h4>Cold Brew Cataratas</h4>
+                <span class="item-price">$ 3.900</span>
+              </div>
+              <p>Extracción en frío de 18 horas con notas cítricas refrescantes para el clima subtropical.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="menu-item-card" data-category="dulce">
+            <div class="menu-item-img">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80" alt="Chipá Tradicional Misionero">
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-head">
+                <h4>Chipá Calentito de Almidón</h4>
+                <span class="item-price">$ 2.400</span>
+              </div>
+              <p>Receta tradicional con queso sardo y almidón de mandioca local. Calentitos y crujientes.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="menu-item-card" data-category="dulce">
+            <div class="menu-item-img">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80" alt="Cheesecake Frutos de la Selva">
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-head">
+                <h4>Tarta Cheesecake Frutos Rojos</h4>
+                <span class="item-price">$ 4.800</span>
+              </div>
+              <p>Base crocante de manteca y coulis artesanal de moras y frambuesas de las chacras de Iguazú.</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="menu-item-card" data-category="pet">
+            <div class="menu-item-img">
+              <img src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?auto=format&fit=crop&w=400&q=80" alt="Pup-uccino de la Selva">
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-head">
+                <h4>Pup-uccino de Cortesía</h4>
+                <span class="item-price promo-tag-price">GRATIS con tu café</span>
+              </div>
+              <p>Espuma deslactosada batida con un sprinkle de polvo de hígado deshidratado 100% natural.</p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="menu-item-card" data-category="pet">
+            <div class="menu-item-img">
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=400&q=80" alt="Muffin Canino Gourmet">
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-head">
+                <h4>Muffin Pet Carne & Zanahoria</h4>
+                <span class="item-price">$ 1.900</span>
+              </div>
+              <p>Porción extra grande para mascotas con buen apetito. Sin conservantes, harinas integrales.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fidelity Program: Pasaporte Michi Club -->
+    <section class="section fidelity-section" id="fidelizacion">
+      <div class="container">
+        <div class="fidelity-wrapper">
+          <div class="fidelity-header text-center">
+            <span class="section-tag light"><i class="fa-solid fa-crown"></i> Fidelización Pet Lovers</span>
+            <h2 class="section-title text-white">Pasaporte Michi Club Iguazú</h2>
+            <p class="section-subtitle text-white-muted">
+              Premiamos cada visita que compartís con tu mejor amigo. Acumulá <strong>5 huellitas</strong> y ganate un <strong>Café Especial de regalo + Snack Gourmet Box</strong> para tu mascota.
+            </p>
+          </div>
+
+          <!-- Interactive Virtual Stamp Card -->
+          <div class="passport-card-container">
+            <div class="passport-card">
+              <div class="passport-top">
+                <div class="passport-brand">
+                  <i class="fa-solid fa-paw"></i>
+                  <span>PASAPORTE MICHI CLUB • IGUAZÚ</span>
+                </div>
+                <div class="passport-badge"><i class="fa-solid fa-shield-heart"></i> MIEMBRO VIP</div>
+              </div>
+
+              <div class="passport-pet-details">
+                <div class="pet-avatar-holder" id="passportAvatar">
+                  <i class="fa-solid fa-shield-cat"></i>
+                </div>
+                <div class="pet-meta">
+                  <span class="meta-label">Mascota Registrada:</span>
+                  <h3 id="passportPetNameDisplay">Luna & Firulais</h3>
+                  <span class="meta-date"><i class="fa-solid fa-location-dot"></i> Sede Selva Misionera • Puerto Iguazú</span>
+                </div>
+              </div>
+
+              <!-- Stamp Slots (5 Stamps) -->
+              <div class="stamps-row" id="stampsRow">
+                <div class="stamp-slot stamped" data-index="1">
+                  <i class="fa-solid fa-paw"></i>
+                  <span>Visita 1</span>
+                </div>
+                <div class="stamp-slot stamped" data-index="2">
+                  <i class="fa-solid fa-paw"></i>
+                  <span>Visita 2</span>
+                </div>
+                <div class="stamp-slot stamped" data-index="3">
+                  <i class="fa-solid fa-paw"></i>
+                  <span>Visita 3</span>
+                </div>
+                <div class="stamp-slot" data-index="4">
+                  <i class="fa-solid fa-paw"></i>
+                  <span>Visita 4</span>
+                </div>
+                <div class="stamp-slot reward-slot" data-index="5">
+                  <i class="fa-solid fa-gift"></i>
+                  <span>¡PREMIO!</span>
+                </div>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="stamp-progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 60%;"></div>
+              </div>
+              <div class="progress-text-info">
+                <span id="stampCountText"><strong>3 de 5 huellitas</strong> coleccionadas</span>
+                <span class="reward-hint">¡Faltan solo 2 visitas para tu premio!</span>
+              </div>
+
+              <!-- Simulation Controls -->
+              <div class="passport-controls">
+                <div class="control-group">
+                  <label for="customPetName">Personalizá tu Pasaporte:</label>
+                  <div class="input-with-btn">
+                    <input type="text" id="customPetName" placeholder="Nombre de tu michi o perro...">
+                    <button class="btn btn-sm btn-primary" id="savePetNameBtn">Guardar Nombre</button>
+                  </div>
+                </div>
+                <div class="stamp-actions">
+                  <button class="btn btn-sm btn-accent" id="addStampBtn">
+                    <i class="fa-solid fa-stamp"></i> Simular Visita (+1 Sello)
+                  </button>
+                  <button class="btn btn-sm btn-secondary" id="resetStampsBtn">
+                    <i class="fa-solid fa-rotate-left"></i> Reiniciar Pasaporte
+                  </button>
+                </div>
+              </div>
+
+              <div id="rewardNotification" class="reward-alert hidden">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <div>
+                  <strong>¡FELICITACIONES! Pasaporte Completo.</strong>
+                  <p>Presentá esta pantalla a nuestro barista en Michi Coffee Iguazú para canjear tu Café Especial + Treat Box.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities / Selva Misionera -->
+    <section class="section amenities-section" id="nosotros">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-leaf"></i> Entorno Natural</span>
+          <h2 class="section-title">El bienestar de tu mascota en medio de la naturaleza</h2>
+          <p class="section-subtitle">Instalaciones creadas para convivir en armonía con la flora autóctona y el confort de toda la familia.</p>
+        </div>
+
+        <div class="amenities-grid">
+          <div class="amenity-card">
+            <div class="amenity-icon"><i class="fa-solid fa-bowl-water"></i></div>
+            <h3>Agua Fresca Filtrada</h3>
+            <p>Estaciones de hidratación permanente con agua fresca para renovar energías tras recorrer la ciudad.</p>
+          </div>
+          <div class="amenity-card">
+            <div class="amenity-icon"><i class="fa-solid fa-couch"></i></div>
+            <h3>Camas y Almohadones Pet</h3>
+            <p>Zonas acolchadas sanitizadas junto a cada mesa para que descansen cómodamente a tu lado.</p>
+          </div>
+          <div class="amenity-card">
+            <div class="amenity-icon"><i class="fa-solid fa-notes-medical"></i></div>
+            <h3>Protocolo Vet Iguazú</h3>
+            <p>Personal capacitado en primeros auxilios caninos y felinos con red de veterinarias de guardia cercanas.</p>
+          </div>
+          <div class="amenity-card">
+            <div class="amenity-icon"><i class="fa-solid fa-fan"></i></div>
+            <h3>Deck Selva Climatizado</h3>
+            <p>Galería abierta rodeada de orquídeas y helechos con microaspersores y ventilación para el verano misionero.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Contact -->
+    <section class="section contact-section" id="contacto">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <span class="section-tag"><i class="fa-solid fa-map-pin"></i> Encontranos</span>
+            <h2>Vení a vivir la experiencia Michi Coffee Iguazú</h2>
+            <p>Te esperamos a pasitos del centro de Puerto Iguazú para compartir una merienda rodeados de selva junto a tus mascotas.</p>
+
+            <ul class="contact-list">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Av. Victoria Aguirre 450, Puerto Iguazú, Misiones, Argentina.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <span>Lunes a Domingos: 08:00 hs a 21:00 hs</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp: +54 9 3757 55-4321</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-instagram"></i>
+                <span>@michicoffee.iguazu</span>
+              </li>
+            </ul>
+
+            <div class="pet-rules-pill">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Por ordenanza y seguridad, pedimos correa para perritos y transportín/arnés para michis.</span>
+            </div>
+          </div>
+
+          <div class="contact-map-mockup">
+            <div class="map-placeholder">
+              <i class="fa-solid fa-tree"></i>
+              <h3>Puerto Iguazú, Misiones</h3>
+              <p>A solo 15 minutos del Parque Nacional Iguazú y las Cataratas del Iguazú.</p>
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir en Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <span class="logo-icon"><i class="fa-solid fa-paw"></i></span>
+          <span class="brand-title">Michi Coffee Iguazú</span>
+        </div>
+        <p>Microemprendimiento gastronómico pet-friendly en la selva misionera.</p>
+      </div>
+      <div class="footer-links">
+        <p>&copy; <span id="currentYear"></span> Michi Coffee Iguazú. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-admin">
+        <button class="footer-admin-link" id="footerAdminBtn">
+          <i class="fa-solid fa-lock"></i> Panel de Dueño / Rentabilidad
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- MODAL DE ACCESO PRIVADO (CONTRASEÑA)                     -->
+  <!-- ======================================================== -->
+  <div class="modal-overlay" id="passwordModal" aria-hidden="true">
+    <div class="modal-window">
+      <button class="modal-close" id="closePassModalBtn" aria-label="Cerrar modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon-shield">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3>Panel Privado de Rentabilidad</h3>
+        <p>Ingresá tu clave de propietario para acceder a la calculadora financiera de costos fijos, variables y punto de equilibrio.</p>
+      </div>
+      <form id="passwordForm" class="modal-body">
+        <div class="form-group">
+          <label for="adminPasswordInput">Contraseña de Administrador:</label>
+          <div class="password-input-wrapper">
+            <input type="password" id="adminPasswordInput" placeholder="Ingresá tu contraseña..." autocomplete="current-password" required>
+            <button type="button" id="togglePasswordVisibility" class="toggle-pass-btn" aria-label="Mostrar u ocultar contraseña">
+              <i class="fa-solid fa-eye" id="eyeIcon"></i>
+            </button>
+          </div>
+          <small class="hint-text"><i class="fa-solid fa-key"></i> Clave inicial por defecto: <strong>michi2026</strong> (podés cambiarla adentro).</small>
+        </div>
+        <div id="passwordError" class="auth-error-msg hidden">
+          <i class="fa-solid fa-circle-exclamation"></i> Contraseña incorrecta. Intentá nuevamente.
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="cancelPassModalBtn">Cancelar</button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-unlock"></i> Desbloquear Panel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- PANEL ADMINISTRATIVO Y CALCULADORA FINANCIERA           -->
+  <!-- ======================================================== -->
+  <div class="modal-overlay admin-fullscreen" id="adminDashboardModal" aria-hidden="true">
+    <div class="dashboard-window">
+      <!-- Dashboard Topbar -->
+      <header class="dash-topbar">
+        <div class="dash-title">
+          <span class="dash-badge"><i class="fa-solid fa-leaf"></i> Microemprendimiento Misiones</span>
+          <h2>Michi Coffee Iguazú • Calculadora de Costos & Rentabilidad</h2>
+        </div>
+        <div class="dash-actions">
+          <button class="btn btn-sm btn-outline-dash" id="changePasswordBtn" title="Cambiar clave actual">
+            <i class="fa-solid fa-key"></i> Cambiar Clave
+          </button>
+          <button class="btn btn-sm btn-outline-dash" id="printReportBtn" title="Imprimir o exportar PDF">
+            <i class="fa-solid fa-print"></i> Exportar Reporte
+          </button>
+          <button class="btn btn-sm btn-danger" id="closeAdminDashboardBtn" title="Cerrar sesión">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Salir
+          </button>
+        </div>
+      </header>
+
+      <!-- Dashboard Main Content -->
+      <div class="dash-body">
+        
+        <!-- Summary KPI Cards: Totales Claros y Transparentes -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon terracotta"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="kpi-data">
+              <span class="kpi-title">Costos Fijos Mensuales</span>
+              <h3 class="kpi-value" id="kpiFixedCosts">$ 0</h3>
+              <small class="kpi-note">Alquiler, sueldos, servicios</small>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon blue"><i class="fa-solid fa-receipt"></i></div>
+            <div class="kpi-data">
+              <span class="kpi-title">Costos Totales Operativos</span>
+              <h3 class="kpi-value" id="kpiTotalCosts">$ 0</h3>
+              <small class="kpi-note" id="kpiTotalCostsNote">Fijos + Insumos + Snacks</small>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon emerald"><i class="fa-solid fa-sack-dollar"></i></div>
+            <div class="kpi-data">
+              <span class="kpi-title">Ganancia Neta Estimada</span>
+              <h3 class="kpi-value highlight-profit" id="kpiNetProfit">$ 0</h3>
+              <small class="kpi-note" id="kpiProfitMargin">Margen: 0%</small>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon purple"><i class="fa-solid fa-scale-balanced"></i></div>
+            <div class="kpi-data">
+              <span class="kpi-title">Punto de Equilibrio</span>
+              <h3 class="kpi-value" id="kpiBreakevenUnits">0 tickets</h3>
+              <small class="kpi-note" id="kpiBreakevenAmount">Equivale a $ 0 / mes</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two Column Layout: Inputs vs Results & Analytics -->
+        <div class="calculator-grid">
+          
+          <!-- LEFT COLUMN: Inputs de Costos Fijos, Variables y Proyección -->
+          <div class="calc-inputs-column">
+            
+            <!-- 1. Costos Fijos -->
+            <div class="calc-card">
+              <div class="calc-card-header">
+                <h3><i class="fa-solid fa-building"></i> 1. Costos Fijos Mensuales (CF)</h3>
+                <span class="badge-hint">Gastos obligatorios vendas o no</span>
+              </div>
+              <div class="calc-card-body form-grid-2">
+                <div class="form-group">
+                  <label for="costRent">Alquiler del Local (Puerto Iguazú):</label>
+                  <div class="modern-input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="costRent" value="380000" min="0" step="1000">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="costUtilities">Luz, Agua, Gas, Internet:</label>
+                  <div class="modern-input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="costUtilities" value="120000" min="0" step="1000">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="costSalaries">Sueldos y Cargas Sociales:</label>
+                  <div class="modern-input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="costSalaries" value="650000" min="0" step="5000">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="costMarketing">Publicidad Local & Redes:</label>
+                  <div class="modern-input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="costMarketing" value="45000" min="0" step="1000">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="costSoftware">Software, POS, Impuestos Fijos:</label>
+                  <div class="modern-input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="costSoftware" value="55000" min="0" step="1000">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="costMaintenance">Mantenimiento & Desinfección Pet:</label>
+                  <div class="modern-input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="costMaintenance" value="50000" min="0" step="1000">
+                  </div>
+                </div>
+              </div>
+              <div class="calc-card-footer">
+                <span>Subtotal Costos Fijos: <strong id="totalFixedCostsText">$ 0</strong></span>
+              </div>
+            </div>
+
+            <!-- 2. Costos Variables Unitarios y Promociones -->
+            <div class="calc-card">
+              <div class="calc-card-header">
+                <h3><i class="fa-solid fa-mug-hot"></i> 2. Ticket Promedio y Costos Variables (CV)</h3>
+                <span class="badge-hint">Insumos por cada cliente</span>
+              </div>
+              <div class="calc-card-body form-grid-2">
+                <div class="form-group">
+                  <label for="unitSalePrice">Precio Ticket Promedio (Ej. Café + Pastelería):</label>
+                  <div class="modern-input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="unitSalePrice" value="5800" min="100" step="100">
+                  </div>
+                  <small class="field-desc">Gasto promedio por persona al sentarse a la mesa.</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="unitBaseCost">Costo Insumos Café & Comida:</label>
+                  <div class="modern-input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="unitBaseCost" value="1600" min="0" step="50">
+                  </div>
+                  <small class="field-desc">Granos de café, leche, harinas, manteca, descartables.</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="unitSnackCost">Costo Producción Snack Pet Gratis:</label>
+                  <div class="modern-input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="unitSnackCost" value="280" min="0" step="10">
+                  </div>
+                  <small class="field-desc">Costo real de preparar el snack gratis de regalo.</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="petVisitRatio">% de Clientes que Vienen con Mascota:</label>
+                  <div class="modern-input-group">
+                    <input type="number" id="petVisitRatio" value="70" min="0" max="100" step="5">
+                    <span class="input-suffix">%</span>
+                  </div>
+                  <small class="field-desc">Porcentaje de tickets donde efectivamente entregás el snack.</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Proyección de Ventas Mensuales -->
+            <div class="calc-card">
+              <div class="calc-card-header">
+                <h3><i class="fa-solid fa-people-group"></i> 3. Proyección de Afluencia & Ventas</h3>
+                <span class="badge-hint">Simulación de volumen</span>
+              </div>
+              <div class="calc-card-body form-grid-2">
+                <div class="form-group">
+                  <label for="dailyCustomers">Clientes / Tickets promedio por día:</label>
+                  <div class="modern-input-group">
+                    <input type="number" id="dailyCustomers" value="35" min="1" max="500">
+                    <span class="input-suffix">pedidos/día</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="openDaysPerMonth">Días abiertos al mes:</label>
+                  <div class="modern-input-group">
+                    <input type="number" id="openDaysPerMonth" value="26" min="1" max="31">
+                    <span class="input-suffix">días/mes</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-card-footer">
+                <span>Ventas proyectadas: <strong id="totalMonthlySalesText">910 tickets al mes</strong></span>
+              </div>
+            </div>
+
+            <div class="calc-buttons-bar">
+              <button class="btn btn-secondary" id="resetDefaultsBtn">
+                <i class="fa-solid fa-rotate-left"></i> Restaurar Valores Típicos
+              </button>
+              <button class="btn btn-primary" id="saveFinancialDataBtn">
+                <i class="fa-solid fa-floppy-disk"></i> Guardar Mis Datos (Persistente)
+              </button>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: Resultados en Tiempo Real, Punto de Equilibrio & Estado Contable -->
+          <div class="calc-results-column">
+            
+            <!-- Breakeven Gauge / Progress Box -->
+            <div class="results-box highlight-box">
+              <h3><i class="fa-solid fa-bullseye"></i> Análisis de Punto de Equilibrio (P.E.)</h3>
+              <p class="box-desc">
+                ¿Cuántos tickets tenés que vender cada mes para cubrir todos tus costos (fijos y variables) sin ganar ni perder dinero?
+              </p>
+
+              <div class="breakeven-metric-flex">
+                <div class="metric-item">
+                  <span class="m-label">Tickets al Mes</span>
+                  <span class="m-val" id="peUnits">340</span>
+                </div>
+                <div class="metric-item">
+                  <span class="m-label">Tickets al Día</span>
+                  <span class="m-val" id="peDailyUnits">13</span>
+                </div>
+                <div class="metric-item">
+                  <span class="m-label">Facturación Mínima</span>
+                  <span class="m-val" id="peRevenue">$ 1.972.000</span>
+                </div>
+              </div>
+
+              <!-- Visual Target Bar -->
+              <div class="target-bar-wrapper">
+                <div class="target-bar-labels">
+                  <span>0 tickets</span>
+                  <span><strong>Meta P.E.</strong></span>
+                  <span id="salesCapacityLabel">Ventas Estimadas</span>
+                </div>
+                <div class="target-bar">
+                  <div class="target-fill" id="targetFillBar" style="width: 100%;"></div>
+                  <div class="pe-indicator-line" id="peIndicatorLine" style="left: 45%;" title="Punto de Equilibrio"></div>
+                </div>
+                <div class="target-status" id="breakevenStatusText">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Detailed Monthly Income Statement: Ecuación Contable 100% Clara -->
+            <div class="results-box">
+              <h3><i class="fa-solid fa-file-invoice-dollar"></i> Estado de Resultados Mensual (Suma Exacta)</h3>
+              <p class="box-desc">
+                Comprobación matemática paso a paso: <strong>Facturación Total - Costos Totales = Ganancia Neta</strong>.
+              </p>
+              
+              <div class="financial-table">
+                <!-- 1. Facturación -->
+                <div class="fin-row plus">
+                  <span><strong>(+) Facturación Bruta Mensual</strong> (<span id="tableTicketCount">910</span> tickets × <span id="tableTicketPrice">$ 5.800</span>)</span>
+                  <strong id="tableGrossRevenue">$ 5.278.000</strong>
+                </div>
+
+                <!-- 2. Costos Variables Alimentos -->
+                <div class="fin-row minus">
+                  <span>(-) Insumos de Café & Alimentos (<span id="tableFoodQty">910</span> porciones)</span>
+                  <strong id="tableVariableCosts" class="text-danger">- $ 1.456.000</strong>
+                </div>
+
+                <!-- 3. Costos Promo Snacks Pet -->
+                <div class="fin-row minus">
+                  <span>(-) Inversión Promo Snacks Pet Gratis (<span id="tablePetSnackCount">637</span> snacks)</span>
+                  <strong id="tableSnackCosts" class="text-danger">- $ 178.360</strong>
+                </div>
+
+                <!-- 4. Costos Fijos -->
+                <div class="fin-row minus">
+                  <span>(-) Costos Fijos Totales del Local (Alquiler, sueldos, servicios)</span>
+                  <strong id="tableFixedCosts" class="text-danger">- $ 1.300.000</strong>
+                </div>
+
+                <!-- 5. Suma Total de Costos Operativos -->
+                <div class="fin-row total-costs-row">
+                  <span><strong>(=) TOTAL DE COSTOS Y GASTOS DEL MES</strong> (Fijos + Variables)</span>
+                  <strong id="tableTotalOperationalCosts">$ 2.934.360</strong>
+                </div>
+
+                <!-- 6. Ganancia Neta Final -->
+                <div class="fin-row final-profit">
+                  <div class="profit-label">
+                    <span>(=) GANANCIA NETA DEL EMPRENDEDOR</span>
+                    <small>Facturación ($ <span id="mathGross">5.278.000</span>) menos Costos Totales ($ <span id="mathCosts">2.934.360</span>)</small>
+                  </div>
+                  <strong id="tableNetProfit" class="profit-number">$ 2.343.640</strong>
+                </div>
+              </div>
+
+              <!-- Recommendation / Strategic Tips -->
+              <div class="business-insights" id="businessInsights">
+                <h4><i class="fa-solid fa-lightbulb"></i> Diagnóstico de Rentabilidad & Selva Misionera</h4>
+                <ul id="insightsList">
+                  <!-- Injected via JS -->
+                </ul>
+              </div>
+            </div>
+
+            <!-- Pricing & Margins Card -->
+            <div class="results-box">
+              <h3><i class="fa-solid fa-chart-pie"></i> Métricas Unitarias por Cliente</h3>
+              <div class="unit-metrics-grid">
+                <div class="unit-metric-card">
+                  <span class="um-label">Margen de Ganancia por Ticket</span>
+                  <strong class="um-val" id="unitMarginVal">$ 4.004</strong>
+                  <span class="um-sub" id="unitMarginPercent">69.0% sobre precio</span>
+                </div>
+                <div class="unit-metric-card">
+                  <span class="um-label">Incidencia del Snack Gratis</span>
+                  <strong class="um-val" id="snackIncidenceVal">3.4%</strong>
+                  <span class="um-sub text-emerald">Costo de fidelización óptimo</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
